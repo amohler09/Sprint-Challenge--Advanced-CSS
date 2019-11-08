@@ -2,74 +2,157 @@
 
 .home {
 
+
+
   .intro {
+
+     img{
+      border-radius: 5px;
+      
+    }//this ends img
 
     h2 {
       padding: 15px;
-    }
+
+    }//this ends h2
 
     p {
       padding:0 15px;
-    }
+
+      @media @phone{
+        line-height: 1.25;
+        text-align: justify;
+        font-weight: bold;
+      }//this ends @media
+    }//this ends p
   
-  }
+  }//this ends .intro
 
   .space-images {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
 
+    .sky, .launch{
+      @media @phone{
+        display: none;
+      }//this ends @media
+    }//this ends .sky, .launch
+
     img {
       width: 28%;
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
-    }
-  }
+
+      @media @phone{
+        display: block;
+        width: 90%;
+        margin: 5% auto;
+      }//this ends @media
+
+      
+    
+    }//this ends img
+  }//this ends .space-images
 
   .visit-planets {
     padding: 15px;
 
+    @media @phone{
+      margin-bottom: -10%;
+    }
+
     h3 {
       margin-top: 11px;
-    }
+    }//this ends h3
 
     p {
       margin-top: 13px;
-    }
-  }
 
-  .walk {
-    margin-top: 60px;
-    border-top: 1px solid @main-border-color;
-    padding: 50px 60px;
-    display: flex;
-    justify-content: center;
+      @media @phone{
+        line-height: 1.25;
+        font-weight: bold;
+        
+      }//this ends @media
+    }//this ends p
+  }//this ends .visit-planets
 
-    .walk-text {
-      width: 50%;
+ 
+  
+    .walk {
+      margin-top: 60px;
+      border-top: 1px solid @main-border-color;
+      padding: 50px 60px;
+      display: flex;
+      justify-content: center;
 
-      h3 {
-        margin-bottom: 10px;
-      }
+        @media @phone{
+          display: flex;
+          flex-direction: column-reverse;
+          padding: 5%;
+          width: 100%;
+        }//this ends @media
 
-      p {
-        margin-bottom: 26px;
-      }
+      .walk-text {
+        width: 50%;
 
-      .btn {
-      }
-    }
+        @media @phone{
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+        }//this ends @media
 
-    .walk-img {
-      width: 46%;
-      margin-left: 4%;
-      
-      img {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-      }
-    }
-  }
-}// home
+        h3 {
+          margin-bottom: 10px;
+        }//this ends h3
+
+        p {
+          margin-bottom: 26px;
+            
+          @media @phone{
+          line-height: 1.25;
+          font-weight: bold;
+         }//this ends @media
+        }//this ends p
+
+        .btn{
+          .custom-btn (@ebony-clay, 30%, white, 12%);
+          padding-top: 2.5%;
+
+          @media @phone{
+            width: 100%;
+            padding: 5%;
+          }//this ends @media
+
+          &:hover{
+            .hover();
+          }//this ends hover
+        
+        }//this ends .btn
+      }//this ends .walk-text
+
+      .walk-img {
+        width: 46%;
+        margin-left: 4%;
+
+        @media @phone{
+          display: flex;
+          flex-direction: column-reverse;
+          width: 100%;
+          margin: auto;
+          padding-bottom: 5%;
+          
+        }//this ends @media
+
+       
+        
+        img {
+          width: 100%;
+          height: auto;
+          border-radius: 10px;
+        }//this ends img
+      }//this ends .walk-img
+    }//this ends .walk
+  
+}//home

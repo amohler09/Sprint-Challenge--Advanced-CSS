@@ -2,12 +2,13 @@
 
 .home {
 
+
+
   .intro {
 
      img{
-      @media @phone{
-        border-radius: 5px;
-      }//this ends @media
+      border-radius: 5px;
+      
     }//this ends img
 
     h2 {
@@ -25,7 +26,7 @@
       }//this ends @media
     }//this ends p
   
-  }//this ends .home
+  }//this ends .intro
 
   .space-images {
     display: flex;
@@ -71,70 +72,87 @@
 
       @media @phone{
         line-height: 1.25;
-        text-align: justify;
         font-weight: bold;
         
       }//this ends @media
     }//this ends p
   }//this ends .visit-planets
 
-  .walk {
-    margin-top: 60px;
-    border-top: 1px solid @main-border-color;
-    padding: 50px 60px;
-    display: flex;
-    justify-content: center;
+ 
+  
+    .walk {
+      margin-top: 60px;
+      border-top: 1px solid @main-border-color;
+      padding: 50px 60px;
+      display: flex;
+      justify-content: center;
 
-      @media @phone{
-        display: flex;
-        flex-direction: column-reverse;
-      }//this ends @media
+        @media @phone{
+          display: flex;
+          flex-direction: column-reverse;
+          padding: 5%;
+          width: 100%;
+        }//this ends @media
 
-    .walk-text {
-      width: 50%;
+      .walk-text {
+        width: 50%;
 
-      @media @phone{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-      }//this ends @media
+        @media @phone{
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+        }//this ends @media
 
-      h3 {
-        margin-bottom: 10px;
-      }
+        h3 {
+          margin-bottom: 10px;
+        }//this ends h3
 
-      p {
-        margin-bottom: 26px;
-      }
+        p {
+          margin-bottom: 26px;
+            
+          @media @phone{
+          line-height: 1.25;
+          font-weight: bold;
+         }//this ends @media
+        }//this ends p
 
-      .btn{
-        .custom-btn (black, 30%, white, 12%);
-        padding-top: 2.5%;
+        .btn{
+          .custom-btn (@ebony-clay, 30%, white, 12%);
+          padding-top: 2.5%;
 
-        &:hover{
-          .hover();
-        }
+          @media @phone{
+            width: 100%;
+            padding: 5%;
+          }//this ends @media
+
+          &:hover{
+            .hover();
+          }//this ends hover
+        
+        }//this ends .btn
+      }//this ends .walk-text
+
+      .walk-img {
+        width: 46%;
+        margin-left: 4%;
+
+        @media @phone{
+          display: flex;
+          flex-direction: column-reverse;
+          width: 100%;
+          margin: auto;
+          padding-bottom: 5%;
+          
+        }//this ends @media
+
        
-      }
-    }
-
-    .walk-img {
-      width: 46%;
-      margin-left: 4%;
-
-      @media @phone{
-        display: flex;
-        flex-direction: column-reverse;
-        width: 100%;
-        margin: auto;
-        margin-top: -5%;
-      }//this ends @media
-      
-      img {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-      }//this ends img
-    }//this ends .walk-img
-  }//this ends something
-}// home
+        
+        img {
+          width: 100%;
+          height: auto;
+          border-radius: 10px;
+        }//this ends img
+      }//this ends .walk-img
+    }//this ends .walk
+  
+}//home
